@@ -1,0 +1,58 @@
+<html>
+    <head>
+  
+<title>comments</title>
+<link rel="stylesheet" href="style_comments.css">
+<link rel="stylesheet" href="style_sidebar.css">
+</head>
+<body>
+<div id="sidebar" onclick="togglemenu()">
+   <div class="toggle"><abbr title="menu">
+           <span class="a"></span>
+            <span class="a"></span>
+             <span class="a"></span></abbr>
+    </div>
+    <ul>
+             <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Notices</a></li>
+               <li><a href="comments.html">Comments</a></li>
+              <li><a href="index.html">Public Review</a></li>
+              <li><a href="about us.html">About us</a></li>
+               <li><a href="contact.html">contact</a></li>
+     </ul>
+   </div>
+<div class="form-design">
+<div class="form">
+        <form class="comments" name="form1">
+        <input type="text" placeholder="User name" name="name1" required><small id="sm"></small>
+        <input type="email" placeholder="Email Id" required>
+        <input type="number" placeholder="Rating 1-5" required>
+     <button id="btn">submit</button>
+   </form>
+   </div>
+</div>
+<script>
+      function validatedata()
+         {
+                  var val=document.form1.name1.value;
+                  var ptrn=/^([^0-9\W]*)$/;
+                  if(ptrn.test(document.form1.name1.value))
+                      {
+                        document.getElementById("sm").textContent="Username is valid";
+                        document.getElementById("sm").style.color="green";
+                      }
+                  else
+                  {
+                    document.getElementById("sm").textContent="Username is invalid(Only Alphabets are allowed)";
+                    document.getElementById("sm").style.color="red";
+                    document.form1.name1.value="";
+                      }
+         }
+         document.form1.btn.addEventListener("click",validatedata);
+function togglemenu()
+         {
+                  document.getElementById('sidebar').classList.toggle('active');
+         }
+</script>
+</body>
+</html>

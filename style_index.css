@@ -1,0 +1,86 @@
+*{
+        margin:0;
+         padding:0;
+        font-family:century gothic;
+  }
+body{
+       background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(b.jpeg);
+       height:700px;
+       background-size:cover;
+       background-position:center;
+     }
+ul{
+    float:right;
+    margin-top:50px;
+    margin-right:50px;
+  }
+ul li{
+       display:inline-block;
+    }
+ul li a{
+        text-decoration:none;
+       color:white;
+      padding:5px 20px;
+      border:1px solid transperant;
+       transition:0.5s ease;
+   }
+ul li.active a{
+          background-color:white;
+         color:black;
+         }
+ul li a:hover{
+         background-color:white;
+         color:black;
+  }
+.logo img{
+             float:left;
+             width:150px;
+              height:auto;  
+      }
+.title{
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%,-50%);
+       }
+.title h1{
+             color:white;
+             font-size:70px;
+            font-family:century gothic;
+        }
+.title h1:hover{
+             font-size:110px;
+          }
+.title h1{
+            transition-property:all;
+              transition-duration:1s;
+              transition-timing-function:linear;
+            }
+        
+.button{
+         position:absolute;
+         top:60%;
+         left:50%;
+         transform:translate(-50%,-50%);
+       }
+.btn {
+           text-decoration:none;
+       color:white;
+      padding:5px 20px;
+      border:1px solid white;
+       }
+.btn:hover{
+         background-color:white;
+         color:black;
+    }
+ .clk{
+    position:absolute;
+    top:2%;
+    left:2%;
+    transform:translate(-2%) translate(-2%);
+    color: rgb(236, 233, 233);
+    font-family: Segoe UI;
+    border:1px solid #ffffff;
+    border-radius:8px;
+    padding:10px;
+  }

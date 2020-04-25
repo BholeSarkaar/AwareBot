@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>index</title>
+<link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+     <div class="main">
+           <div id="clock" class="clk">
+              </div>
+           <ul> 
+                   <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Public Review</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                     <li><a href="about us.html">About us</a></li>
+          </ul>
+      </div>
+      <div class="title"><h1>AwareBot</h1></div>
+      <div class="button">
+            <a class="btn" href="notices.html">Notices</a>
+            <a class="btn" href="comments.html">comments</a>
+      </div>
+      <script type="text/javascript">
+      
+      function showTime(){
+             var mydate = new Date();
+             var year = mydate.getYear();
+            if(year < 1000){
+                  year +=1900
+            }
+            var day = mydate.getDay();
+            var month = mydate.getMonth();
+            var day = mydate.getDay();
+            var daym = mydate.getDate();
+            var dayarray = new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","Friday,","saturday,");
+            var montharray = new Array("January","February","March","April","may","June","July","August","September","October","November","December");
+            
+            
+            var currentTime = new Date();
+            var h = currentTime.getHours();
+            var m = currentTime.getMinutes();
+            var s = currentTime.getSeconds();
+            if(h == 24)
+            {
+                  h = 0;
+            }
+            else if(h > 12)
+            {
+                  h = h - 0;
+            }
+            if(h < 10 )
+            {
+                  h = "0" + h;
+            }
+            if(m < 10)
+            {
+                  m= "0" + m;
+            }
+            if(s < 10)
+            {
+                  s = "0" + s;
+            }
+            var myClock=document.getElementById("clock").innerHTML=" "+dayarray[day]+" "+daym+" "+montharray[month]+" "+year+" | "+h+" : "+m+" : "+s;;
+            
+            setTimeout("showTime()",1000);
+
+      }
+      showTime(); 
+      </script>
+</body>
+</html>
+

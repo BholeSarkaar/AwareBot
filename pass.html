@@ -1,0 +1,37 @@
+<html>
+    <head>
+  
+<title>password</title>
+<link rel="stylesheet" href="pass.css">
+</head>
+<body>
+        <div class="form-design">
+                <div class="form">
+                        <form class="comments" name="form1">
+                        <input type="password" placeholder="Enter Password" name="name1" required>
+                     <button id="btn">submit</button>
+                   </form>
+                   </div>
+                </div>
+                <script>
+                        function validatedata()
+                        {
+                                var f1=document.form1.elements[0];
+                                 if(f1.value=="rohit")
+                                     {
+                                       document.getElementById("sm").textContent="Password is valid";
+                                       document.getElementById("sm").style.color="green";
+                                       document.getElementById("sm").style.fontFamily="times new roman";                                            
+                                     }
+                                 else
+                                 {
+                                   document.getElementById("sm").textContent="Password is invalid";
+                                   document.getElementById("sm").style.color="red";
+                                   document.getElementById("sm").style.fontFamily="times new roman";
+                                   document.form1.name1.value="";
+                                     }
+                        }
+                        document.form1.btn.addEventListener("click",validatedata);
+                        </script>                       
+</body>
+</html>
